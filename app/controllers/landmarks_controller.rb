@@ -8,4 +8,8 @@ class LandmarksController < ApplicationController
     landmark = Landmark.create(params[:landmark])
   end
 
+  get '/landmarks' do
+    erb :'landmarks/index'
+  end
+
 end
