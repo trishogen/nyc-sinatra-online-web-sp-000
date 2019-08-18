@@ -11,7 +11,7 @@
 
     <h2>Titles</h2>
     <% @titles.each do |t| %>
-      <input type="checkbox" name="figure[title_ids][]" id="title_<%= t.name %>" value="<%= t.id %>" <%= 'checked' if @figure.titles.include?(t) %>><br>
+      <input type="checkbox" name="figure[title_ids][]" id="title_<%= t.name %>" value="<%= t.id %>" <%= 'checked' if @figure.titles.include?(t) %>><%= t.name %><br>
     <% end %>
 
     <h2>Create New Title:</h2>
@@ -20,7 +20,7 @@
 
     <h2>Landmarks</h2>
     <% @landmarks.each do |l| %>
-      <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%= l.name %>" value="<%= l.id %>" <%= 'checked' if @figure.landmarks.include?(l) %>><br>
+      <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%= l.name %>" value="<%= l.id %>" <%= 'checked' if @figure.landmarks.include?(l) %>><%= l.name%><br>
     <% end %>
 
     <h2>Create New Landmark:</h2>
