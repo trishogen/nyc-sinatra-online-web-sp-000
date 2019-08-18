@@ -41,7 +41,6 @@ class FiguresController < ApplicationController
     figure = Figure.find(params[:id])
     figure.name = params[:figure][:name]
 
-
     if !params[:title][:name].empty?
       figure.titles << Title.create(name: params[:title][:name])
     end
