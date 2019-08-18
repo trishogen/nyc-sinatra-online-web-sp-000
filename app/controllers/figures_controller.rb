@@ -8,6 +8,11 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     figure = Figure.create(params[:figure])
-    figure.title = 
+
+    if !params[:title][:name].empty?
+      figure.title < Title.create(name: params[:title][:name])
+    end
+
+    figure.save
   end
 end
