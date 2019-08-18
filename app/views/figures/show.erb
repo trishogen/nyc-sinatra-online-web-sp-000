@@ -3,10 +3,16 @@
 <head>
 </head>
 <body>
-  <%= @figure.name %><br>
-  Titles:
+  <h1><%= @figure.name %><br></h1>
+
+  <h2>Titles:</h2>
   <% @figure.titles.each do |t| %>
     <%= t.name %><br>
+  <% end %>
+
+  <h2>Landmarks:</h2>
+  <% @figure.landmarks.each do |l| %>
+    <%= l.name %><br>
   <% end %>
 </body>
 </html>
