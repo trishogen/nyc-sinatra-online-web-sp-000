@@ -4,5 +4,9 @@
 </head>
 <body>
   <%= @figure.name %><br>
+  Titles:
+  <% @figure.titles.each do |t| %>
+    <%= t.name %><br>
+  <% end %>
 </body>
 </html>
