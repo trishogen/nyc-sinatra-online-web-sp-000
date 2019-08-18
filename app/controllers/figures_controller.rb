@@ -8,6 +8,6 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     figure = Figure.create(params[:figure])
-    figure.landmarks = Landmark.find_or_create_by()
+    figure.title = 
   end
 end
