@@ -38,8 +38,8 @@ class FiguresController < ApplicationController
   end
 
   patch '/figures/:id' do
-    figure = Figure.find(params[:id])
-    puts figure.id
+    figure = Figure.find_or_create(params[:id])
+
     redirect to "/figures/#{figure.id}"
   end
 
