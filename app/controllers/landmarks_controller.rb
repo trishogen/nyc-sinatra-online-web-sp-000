@@ -25,7 +25,9 @@ class LandmarksController < ApplicationController
 
   patch '/landmarks/:id' do
     @landmark = Landmark.find(params[:id])
-    erb :"landmarks/#{@landmark.id}"
+
+
+    redirect to :"landmarks/#{@landmark.id}"
   end
 
 end
