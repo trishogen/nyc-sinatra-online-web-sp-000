@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-  <form action="/figures" method="POST">
+  <form action="/figures/<% @figure.id %>" method="POST">
     <input type="hidden" name="_method" method="PATCH">
 
     <label for="figure_name">Name</label>
