@@ -39,6 +39,7 @@ class FiguresController < ApplicationController
 
   patch '/figures/:id' do
     figure = Figure.find(params[:id])
+    puts params
     figure.update(params[:figure])
 
     if !params[:title][:name].empty?
