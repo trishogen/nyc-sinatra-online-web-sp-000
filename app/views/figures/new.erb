@@ -7,15 +7,22 @@
     <label for="name">Name </label>
     <input type="text" id="name" name="figure[name]">
 
-    <label>Titles</label>
+    <h2>Titles</h2>
     <% @titles.each do |t| %>
       <input type="checkbox" name="figure[title_ids][]" id="<%= t.name %>" value="<%= t.id %>"><%= t.name %>
     <% end %>
 
-    <label>Landmarks</label>
+    <h2>Create New Title:</h2>
+    <input type="text" name="title[name]">
+
+
+    <h2>Landmarks</h2>
     <% @landmarks.each do |l| %>
       <input type="text" name="figure[landmark_ids][]" id="<%= l.name %>" value="<%= l.id %>"><%= l.name %>
     <% end %>
+
+    <h2>Create New Landmark:</h2>
+    <input type="text" name="landmark[name]">
 
     <input type="submit" id="submit">
   </form>
