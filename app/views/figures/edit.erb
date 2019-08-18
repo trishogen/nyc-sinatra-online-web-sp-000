@@ -20,7 +20,7 @@
 
     <h2>Landmarks</h2>
     <% @landmarks.each do |l| %>
-      <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%= l.id %>" value="<%= l.id %>"><%= l.name %><%= 'checked' if @figure.landmarks.include?(l) %><br>
+      <input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%= l.name %>" value="<%= l.id %>" <%= 'checked' if @figure.landmarks.include?(l) %>><br>
     <% end %>
 
     <h2>Create New Landmark:</h2>
