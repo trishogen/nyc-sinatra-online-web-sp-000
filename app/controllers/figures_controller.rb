@@ -39,7 +39,7 @@ class FiguresController < ApplicationController
 
   patch '/figures/:id' do
     figure = Figure.find(params[:id])
-    figure.name = params[:figure][:name]
+    figure.update(params[:figure])
 
     if !params[:title][:name].empty?
       figure.titles << Title.create(name: params[:title][:name])
