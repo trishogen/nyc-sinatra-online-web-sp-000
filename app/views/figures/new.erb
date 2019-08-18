@@ -8,11 +8,13 @@
     <input type="text" id="name" name="figure[name]">
 
     <label>Titles</label>
-    <input type="checkbox" name="figure[title_ids][]">
+    <% @titles.each do |t| %>
+      <input type="checkbox" name="figure[title_ids][]" id="<%= t.name %>" value="<%= t.id %>"><%= t.name %>
+    <% end %>
 
     <label>Landmarks</label>
     <% @landmarks.each do |l| %>
-    <input type="text" name="figure[landmark_ids][]" id="<%= l.name %>" value="<%= l.id %>"><%= l.name %>
+      <input type="text" name="figure[landmark_ids][]" id="<%= l.name %>" value="<%= l.id %>"><%= l.name %>
     <% end %>
 
     <input type="submit" id="submit">
